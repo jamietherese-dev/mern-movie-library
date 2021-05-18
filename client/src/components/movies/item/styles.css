@@ -1,0 +1,26 @@
+.item-movie {
+  padding: 1em;
+  margin-left: -.5em;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.img-poster {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tooltip {
+  text-transform: none;
+  max-width: 250px;
+}
