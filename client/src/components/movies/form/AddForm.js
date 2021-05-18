@@ -9,12 +9,12 @@ const AddForm = ({ onSubmit }) => {
     runningTime: '',
     releaseYear: '',
     genreValues: '',
+    avatar: '',
   };
   const [movie, setMovie] = useState(defaultMovie);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log('movie', movie);
     onSubmit(movie);
     setMovie({...defaultMovie});
   }
@@ -55,6 +55,11 @@ const AddForm = ({ onSubmit }) => {
           <small id="genresHelp" className="form-text text-muted">
             Separate your genres with comma
           </small>
+        </div>
+        <div className="form-group">
+          <label>Image URL</label>
+          <input className="form-control"  placeholder="Movie poster image URL"
+            value={movie.avatar} onChange={e => setMovie({ ...movie, avatar: e.target.value })}/>
         </div>
         <div className="form-group">
           <input type="submit" value="Save" className="btn btn-primary" />
